@@ -5,7 +5,7 @@ module.exports = {
         author: `RY Xia`,
         description: `I am RY Xia, a third year CS student at UBC, a full stack engineer.`,
         imagePath: `/social-sharing.jpg`,
-        siteUrl: `https://ryxia.info`,
+        siteUrl: `https://ruiyuanxia.github.io/personal-web/`,
         title: `RY Xia`
     },
     pathPrefix: `/personal-web`,
