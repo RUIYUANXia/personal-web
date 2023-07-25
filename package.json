@@ -60,7 +60,7 @@
     "preinstall": "node -r fs -e \"fs.existsSync('.git/hooks') || fs.mkdirSync('.git/hooks')\"",
     "start": "yarn dev",
     "dev": "rm -rf .cache && gatsby develop",
-    "deploy": "gatsby build --prefix-paths && gh-pages -d public",
+    "deploy": "gatsby build --prefix-paths && gh-pages -d public -b gh-pages",
     "build": "rm -rf .cache && gatsby build",
     "serve": "gatsby serve",
     "predeploy": "npm run clean",
