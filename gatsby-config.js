@@ -5,10 +5,9 @@ module.exports = {
         author: `RY Xia`,
         description: `I am RY Xia, a third year CS student at UBC, a full stack engineer.`,
         imagePath: `/social-sharing.jpg`,
-        pathPrefix: "/personal-web",
         title: `RY Xia`
     },
-    pathPrefix: `/`,
+    pathPrefix: `/personal-web`,
     plugins: [
         {
             options: {
