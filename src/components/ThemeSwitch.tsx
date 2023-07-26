@@ -42,10 +42,10 @@ export const StyledThemeSwitch = styled.div`
     ${props => {
         if (props.theme.color === 'light') {
             return `
-                background-color: #66f7ff;
+                background-color: #1f8bf0;
 
                 &:hover {
-                    background-color: #66b8ff;
+                    background-color: #595dde;
                 }
 
             `;

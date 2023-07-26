@@ -2,7 +2,7 @@ import { css } from '../lib/styled-components';
 
 export const primitiveColors = {
     aero: '#5adcfa',
-    deutziaWhite: '#ffd4fd',
+    lightblue: '#56f5ed',
     black: '#000000',
     oldGloryBlue: '#03256C',
     white: '#FFFFFF'
@@ -15,12 +15,12 @@ export const colors = {
     textBodyLight: primitiveColors.black,
     textBodyDark: primitiveColors.white,
 
-    linkInactiveLight: primitiveColors.aero,
+    linkInactiveLight: primitiveColors.oldGloryBlue,
     linkActiveLight: primitiveColors.oldGloryBlue,
     linkInactiveDark: primitiveColors.aero,
     linkActiveDark: primitiveColors.white,
 
-    backgroundLight: primitiveColors.deutziaWhite,
+    backgroundLight: primitiveColors.lightblue,
     backgroundDark: '#051221',
     backgroundSecondaryLight: primitiveColors.white,
     backgroundSecondaryDark: '#09203A',
