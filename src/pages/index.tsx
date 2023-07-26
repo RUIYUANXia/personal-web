@@ -4,6 +4,7 @@ import Img from 'gatsby-image';
 import React from 'react';
 import Fade from 'react-reveal/Fade';
 
+import BlogList from '../components/BlogList';
 import { Button, Divider, PageWrapper } from '../components/Common';
 import Github from '../components/icons/Github';
 import Linkedin from '../components/icons/Linkedin';
@@ -354,6 +355,18 @@ export const Home = ({
                         <Button to="/projects">See all projects</Button>
                     </Fade>
                 </Section>
+                <Fade>
+                    <Divider />
+                </Fade>
+                <RecentPosts>
+                    <Fade top>
+                        <StyledTitle as="h2">Recent Posts</StyledTitle>
+                    </Fade>
+                    <BlogList posts={posts} />
+                    <Fade bottom>
+                        <Button to="/blog">See all posts</Button>
+                    </Fade>
+                </RecentPosts>
             </StyledPageWrapper>
         </Layout>
     );
