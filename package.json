@@ -63,7 +63,6 @@
     "deploy": "gatsby build --prefix-paths && gh-pages -d public -b gh-pages",
     "build": "rm -rf .cache && gatsby build",
     "serve": "gatsby serve",
-    "predeploy": "npm run clean",
     "lint": "eslint './**/*.{js,ts,tsx}'",
     "lint:fix": "eslint  './**/*.{js,ts,tsx}' --fix",
     "pretty": "prettier --config ./.prettierrc.json --write './**/*.{js,ts,tsx}' && yarn run lint:fix",
