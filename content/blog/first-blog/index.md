@@ -18,7 +18,7 @@ import Quote from "$components/mdx/Quote";
 
 ## Motivation
 
-This is my first blog! Let's start by introducing some basic python knowledge.
+This is my first blog! Let's start by introducing some basic Python knowledge.
 
 
 ## Python Features
