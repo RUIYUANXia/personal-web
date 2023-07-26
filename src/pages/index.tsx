@@ -230,7 +230,7 @@ const SocialMediaGroup = (): JSX.Element => {
             icon: <Github iconFill={iconFill} />
         },
         {
-            link: 'https://www.linkedin.com/in/ruiyuan-xia-13921184152xry/',
+            link: 'https://www.linkedin.com/in/ryxia2002/',
             icon: <Linkedin iconFill={iconFill} />
         }
         // {
