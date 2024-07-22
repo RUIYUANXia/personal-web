@@ -127,6 +127,16 @@ const IntroDescription = styled.p`
     `};
 `;
 
+const WorkDescription = styled.p`
+    ${textSize.normal};
+    ${textColor.body};
+    margin-bottom: 10px;
+
+    ${media.medium`
+        margin-bottom: 30px;
+    `};
+`;
+
 const SocialMedia = styled.ul`
     display: flex;
     align-items: center;
@@ -296,10 +306,13 @@ export const Home = ({
                     </HeadshotWrapper>
                     <Intro>
                         <IntroDescription>
-                            I am <strong>Ruiyuan Xia</strong> <br />a{' '}
-                            <strong>full stack software developer</strong>
-                            <br />a <strong>third year CS student</strong> at{' '}
-                            <strong>UBC</strong>
+                           <strong>Hi!</strong> 
+                           <br />
+                            I am <strong>Ruiyuan Xia</strong> 
+                            <br />
+                            a{' '}<strong>full stack software engineer</strong>
+                            <br />
+                            <strong>CS</strong> Major at{' '}<strong>UBC</strong>
                         </IntroDescription>
                         <SocialMediaGroup />
                     </Intro>
@@ -310,6 +323,21 @@ export const Home = ({
                     style={{ position: 'absolute' }}
                 />
             </Header>
+            <Fade>
+                <Divider />
+            </Fade>
+            <Section>
+                <Fade top>
+                    <StyledTitle as="h2">Work Experience</StyledTitle>
+                </Fade>
+                <Fade bottom>
+                    <WorkDescription>
+                        I have worked at{' '}
+                        <strong>Microsoft | Activision</strong>{' '}
+                        as a{' '} <strong>Data Engineer</strong>
+                    </WorkDescription>
+                </Fade>
+            </Section>
             <Fade>
                 <Divider />
             </Fade>
