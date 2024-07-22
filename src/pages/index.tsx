@@ -3,6 +3,7 @@ import { graphql } from 'gatsby';
 import Img from 'gatsby-image';
 import React from 'react';
 import Fade from 'react-reveal/Fade';
+import activisionLogo from '../../assets/images/activision_logo.png'
 
 import BlogList from '../components/BlogList';
 import { Button, Divider, PageWrapper } from '../components/Common';
@@ -127,6 +128,59 @@ const IntroDescription = styled.p`
     `};
 `;
 
+const WorkExperience = styled.div`
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding-top: 5px;
+    padding-right: 20px;
+    padding-left: 20px;
+`;
+
+const WorkHeader = styled.div`
+  display: flex;
+  align-items: center;
+  margin-bottom: 10px;
+  
+`;
+
+const WorkLogo = styled.img`
+  width: 50px;
+  height: 50px;
+  margin-right: 20px;
+`;
+
+const WorkSection = styled.div`
+    display: flex;
+    flex-direction: column;
+    align-items: left;
+    padding: 0px 30px;
+`;
+
+
+const WorkTitle = styled.p`
+    ${textSize.largeThin};
+    ${textColor.body};
+    margin-bottom: 10px;
+    text-align: left;
+
+    ${media.medium`
+        margin-bottom: 30px;
+    `};
+`;
+
+const WorkSubTitle = styled.p`
+    ${textSize.normal};
+    ${textColor.body};
+    margin-bottom: 10px;
+    text-align: right;
+    margin-left: auto;
+
+    ${media.medium`
+        margin-bottom: 30px;
+    `};
+`;
+
 const WorkDescription = styled.p`
     ${textSize.normal};
     ${textColor.body};
@@ -224,7 +278,7 @@ const ProjectDescription = styled.p`
 `;
 
 const StyledTitle = styled(Title)`
-    margin-bottom: 100px;
+    margin-bottom: 80px;
 
     ${media.medium`
         margin-bottom: 60px;
@@ -326,18 +380,35 @@ export const Home = ({
             <Fade>
                 <Divider />
             </Fade>
-            <Section>
+            <WorkExperience>
                 <Fade top>
                     <StyledTitle as="h2">Work Experience</StyledTitle>
                 </Fade>
+            </WorkExperience>
+            <WorkSection>
                 <Fade bottom>
+                    <WorkHeader>
+                        <WorkLogo src={activisionLogo} alt="Activision Logo" />
+                        <WorkTitle>
+                            <strong>Full Stack Engineer - Data</strong>
+                            <br /> @ Microsoft | Activision • Internship
+                        </WorkTitle>
+                        <WorkSubTitle>
+                            <strong>Sep 2023 - Aug 2024 • 1 yr</strong>
+                            <br /> Vancouver, BC, Canada • Hybrid
+                        </WorkSubTitle>
+                    </WorkHeader>
                     <WorkDescription>
-                        I have worked at{' '}
-                        <strong>Microsoft | Activision</strong>{' '}
-                        as a{' '} <strong>Data Engineer</strong>
+                        • Responsible for the development of data engineering and self service applications with diverse datastore integrations, primarily leveraging Django. <br />
+                        • Involved in the design and implementation of templated SQL systems for metadata tracking and data quality assurance. <br />
+                        • Participated in full-stack development activities, including backend services, APIs, and frontends for data analytics tool delivery. <br />
+                        • Enhanced the anti-cheat application by integrating a permanent ban feature for player mitigation. <br />
+                        • Authored complex SQL queries for diverse reporting, dashboarding and visualization. <br />
+                        • Supported KPI data ingress and reporting, including game client failures and backend system health. <br />
+                        • Enhanced ElasticSearch functionality for the Data QA automation tool, improving the search results.
                     </WorkDescription>
                 </Fade>
-            </Section>
+            </WorkSection>
             <Fade>
                 <Divider />
             </Fade>
