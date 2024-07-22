@@ -234,11 +234,6 @@ const SocialMediaGroup = (): JSX.Element => {
             link: 'https://www.linkedin.com/in/ryxia2002/',
             icon: <Linkedin iconFill={iconFill} />
         }
-        // {
-        //     link:
-        //         'https://drive.google.com/file/d/1z4rsOkDIcYN-tlRhIo-7ye0-2ACRuPYA/view?usp=sharing',
-        //     icon: <Wechat iconFill={iconFill} />
-        // }
     ];
 
     return (
