@@ -306,7 +306,7 @@ export const Home = ({
                     </HeadshotWrapper>
                     <Intro>
                         <IntroDescription>
-                           <strong>Hi!</strong> 
+                           <strong>Hi there!</strong> 
                            <br />
                             I am <strong>Ruiyuan Xia</strong> 
                             <br />
