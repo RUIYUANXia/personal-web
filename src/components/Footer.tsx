@@ -4,6 +4,7 @@ import styled from 'styled-components';
 import { colors, textColor } from '../styles/common';
 import { PageWrapper } from './Common';
 import Link from './Link';
+import Typewriter from './Typewritter';
 
 export const footerHeight = 120;
 
@@ -72,7 +73,7 @@ const FooterComponent = ({}: FooterProps) => {
                         </SocialMediaLink>
                     </SocialMediaListItem>
                 </SocialMediaList>
-                <strong>sincere gratitude to the open source on GitHub</strong>
+                <strong> 😉 <Typewriter words={["Please don't hesitate to get in touch with me!",'Sincere gratitude to the open source on GitHub!']} delay={100}/></strong>
             </ModifiedPageWrapper>
         </Footer>
     );

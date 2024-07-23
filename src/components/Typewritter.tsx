@@ -9,12 +9,13 @@ const Typewriter = ({ words, delay }: { words: string[], delay: number }) => {
   useEffect(() => {
     if (currentWordIndex < words.length) {
       const currentWord = words[currentWordIndex];
+      const currentDelay = isDeleting ? delay / 2 : delay;
       if (isDeleting) {
         if (currentIndex >= 0) {
           const timeout = setTimeout(() => {
             setCurrentText(currentWord.substring(0, currentIndex));
             setCurrentIndex(prevIndex => prevIndex - 1);
-          }, delay);
+          }, currentDelay);
           return () => clearTimeout(timeout);
         } else {
           setIsDeleting(false);
@@ -25,7 +26,7 @@ const Typewriter = ({ words, delay }: { words: string[], delay: number }) => {
           const timeout = setTimeout(() => {
             setCurrentText(currentWord.substring(0, currentIndex + 1));
             setCurrentIndex(prevIndex => prevIndex + 1);
-          }, delay);
+          }, currentDelay);
           return () => clearTimeout(timeout);
         } else {
           setIsDeleting(true);

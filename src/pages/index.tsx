@@ -367,7 +367,7 @@ export const Home = ({
                             <br />
                             a <strong>UBC</strong> student major in <strong>CS</strong>
                             <br />
-                            a <strong>full stack </strong> <strong><Typewriter words={['software developer...', 'data engineer...']} delay={180} /></strong>
+                            a <strong>full stack </strong> <strong><Typewriter words={['software developer...', 'data engineer...']} delay={170} /></strong>
                         </IntroDescription>
                         <SocialMediaGroup />
                     </Intro>
