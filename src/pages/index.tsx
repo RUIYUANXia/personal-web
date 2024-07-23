@@ -15,6 +15,7 @@ import Layout from '../components/Layout';
 import Link from '../components/Link';
 import { Title } from '../components/Typography';
 import styled from '../lib/styled-components';
+import { keyframes } from 'styled-components';
 import {
     colors,
     media,
@@ -92,10 +93,17 @@ const HeadshotWrapper = styled.div`
         align-self: center;
     `};
 `;
+const HeadershotAnimation = keyframes`
+    0%, 100% { transform: scale(1) rotate(0deg); }
+    25% { transform: scale(1.05) rotate(4deg); }
+    50% { transform: scale(1.05) rotate(-4deg); }
+    75% { transform: scale(0.95) rotate(-4deg); }
+`;
 
 const Headshot = styled(Img)`
     height: 460px;
     width: 460px;
+    animation: ${HeadershotAnimation} 10s infinite;
 
     ${media.medium`
         height: 250px;
