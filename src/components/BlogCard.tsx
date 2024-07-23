@@ -14,18 +14,17 @@ import {
 import { Post as PostType } from '../types/Post';
 import Link from './Link';
 
+
+// TODO: Blog Cards Width Size Bug
 const Post = styled.section`
-    width: 100%;
-    height: 340px;
+    width: 800px;
+    height: auto;
     margin: 0 0 80px;
-    /* padding: 0 20px; */
 
     ${media.large`
-        height: calc(100% - 60px);
+        width: 800px;
+        height: auto;
         margin: 0 0 60px;
-        flex-basis: 400px;
-        flex-grow: 1;
-        max-width: 500px;
     `};
 `;
 

@@ -458,6 +458,7 @@ export const Home = ({
                         <Button to="/projects">See all projects</Button>
                     </Fade>
                 </Section>
+                </StyledPageWrapper>
                 <Fade>
                     <Divider />
                 </Fade>
@@ -470,7 +471,6 @@ export const Home = ({
                         <Button to="/blog">See all posts</Button>
                     </Fade>
                 </RecentPosts>
-            </StyledPageWrapper>
         </Layout>
     );
 };
