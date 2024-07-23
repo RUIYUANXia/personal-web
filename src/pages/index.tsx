@@ -9,6 +9,7 @@ import BlogList from '../components/BlogList';
 import { Button, Divider, PageWrapper } from '../components/Common';
 import Github from '../components/icons/Github';
 import Linkedin from '../components/icons/Linkedin';
+import Typewriter from '../components/Typewritter';
 // import Wechat from '../components/icons/Wechat';
 import Layout from '../components/Layout';
 import Link from '../components/Link';
@@ -362,11 +363,11 @@ export const Home = ({
                         <IntroDescription>
                            <strong>Hi there!</strong> 
                            <br />
-                            I am <strong>Ruiyuan Xia</strong> 
+                            I am <strong>Ruiyuan Xia</strong>
                             <br />
-                            a{' '}<strong>full stack software engineer</strong>
+                            a <strong>UBC</strong> student major in <strong>CS</strong>
                             <br />
-                            <strong>CS</strong> Major at{' '}<strong>UBC</strong>
+                            a <strong>full stack </strong> <strong><Typewriter words={['software developer...', 'data engineer...']} delay={180} /></strong>
                         </IntroDescription>
                         <SocialMediaGroup />
                     </Intro>
