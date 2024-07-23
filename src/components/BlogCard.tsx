@@ -15,16 +15,27 @@ import { Post as PostType } from '../types/Post';
 import Link from './Link';
 
 
-// TODO: Blog Cards Width Size Bug
 const Post = styled.section`
-    width: 800px;
+    width: 1200px;
     height: auto;
     margin: 0 0 80px;
 
     ${media.large`
-        width: 800px;
+        width: 1000px;
         height: auto;
-        margin: 0 0 60px;
+        margin: 0 0 40px;
+    `};
+
+    ${media.medium`
+        width: 500px;
+        height: auto;
+        margin: 0 0 40px;
+    `};
+
+    ${media.small`
+        width: 400px;
+        height: auto;
+        margin: 0 0 40px;
     `};
 `;
 
