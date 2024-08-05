@@ -107,7 +107,7 @@ const NAVIGATION = [
     { to: '/projects/', label: 'projects' },
     {
         to:
-            'https://docs.google.com/document/d/1IAaGJrf5SBitWUtxgs8Yfetgin0qlF09LVRBQo__cEQ/edit?usp=sharing',
+            'https://drive.google.com/file/d/1Ha61szU3gCIGXmxZKK9yRCPLYcQJNKZ0/view?usp=sharing',
         label: 'resume'
     }
 ];

@@ -14,18 +14,28 @@ import {
 import { Post as PostType } from '../types/Post';
 import Link from './Link';
 
+
 const Post = styled.section`
-    width: 100%;
-    height: 340px;
+    width: 1200px;
+    height: auto;
     margin: 0 0 80px;
-    /* padding: 0 20px; */
 
     ${media.large`
-        height: calc(100% - 60px);
-        margin: 0 0 60px;
-        flex-basis: 400px;
-        flex-grow: 1;
-        max-width: 500px;
+        width: 1000px;
+        height: auto;
+        margin: 0 0 40px;
+    `};
+
+    ${media.medium`
+        width: 500px;
+        height: auto;
+        margin: 0 0 40px;
+    `};
+
+    ${media.small`
+        width: 400px;
+        height: auto;
+        margin: 0 0 40px;
     `};
 `;
 

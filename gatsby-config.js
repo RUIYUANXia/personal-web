@@ -3,7 +3,7 @@
 module.exports = {
     siteMetadata: {
         author: `RY Xia`,
-        description: `I am RY Xia, a third year CS student at UBC, a full stack engineer.`,
+        description: `I am RY Xia, a CS student at UBC, a full stack engineer.`,
         imagePath: `/social-sharing.jpg`,
         siteUrl: `https://ruiyuanxia.github.io/personal-web/`,
         title: `RY Xia`
