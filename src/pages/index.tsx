@@ -3,12 +3,15 @@ import { graphql } from 'gatsby';
 import Img from 'gatsby-image';
 import React from 'react';
 import Fade from 'react-reveal/Fade';
+import 'slick-carousel/slick/slick.css';
+import 'slick-carousel/slick/slick-theme.css';
 import activisionLogo from '../../assets/images/activision_logo.png'
 
 import BlogList from '../components/BlogList';
 import { Button, Divider, PageWrapper } from '../components/Common';
 import Github from '../components/icons/Github';
 import Linkedin from '../components/icons/Linkedin';
+import SkillCarousel from '../components/SkillCarousel';
 import Typewriter from '../components/Typewritter';
 // import Wechat from '../components/icons/Wechat';
 import Layout from '../components/Layout';
@@ -127,7 +130,21 @@ const Intro = styled.div`
     `};
 `;
 
-const IntroDescription = styled.p`
+const skills = [
+    {
+      title: 'Django',
+      image: '/path/to/django-logo.png',
+      description: 'A high-level Python Web framework that encourages rapid development.',
+    },
+    {
+      title: 'React',
+      image: '/path/to/react-logo.png',
+      description: 'A JavaScript library for building user interfaces.',
+    },
+    // TODO: more skills
+  ];
+
+const IntroDescription: React.FC = styled.p`
     ${textSize.largeThin};
     ${textColor.body};
     margin-bottom: 10px;
@@ -172,10 +189,6 @@ const WorkTitle = styled.p`
     ${textColor.body};
     margin-bottom: 10px;
     text-align: left;
-
-    ${media.medium`
-        margin-bottom: 30px;
-    `};
 `;
 
 const WorkSubTitle = styled.p`
@@ -386,6 +399,15 @@ export const Home = ({
                     style={{ position: 'absolute' }}
                 />
             </Header>
+            <Fade>
+                <Divider />
+            </Fade>
+            <Fade top>
+                    <StyledTitle as="h2">Skills</StyledTitle>
+            </Fade>
+            <Fade bottom>
+                <SkillCarousel skills={skills} />
+            </Fade>    
             <Fade>
                 <Divider />
             </Fade>
