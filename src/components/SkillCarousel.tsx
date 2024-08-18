@@ -10,12 +10,13 @@ interface SkillCardProps {
 
 const SkillCardContainer = styled.div`
   perspective: 1000px;
+  perspective-origin: center;
   width: 200px;
   height: 300px;
   margin: 20px;
   transition: transform 0.3s ease;
   &:hover {
-    transform: scale(1.05);
+    transform: scale(1.1);
   }
 `;
 
@@ -28,8 +29,10 @@ const SkillCardInner = styled.div`
   transform-style: preserve-3d;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
   border-radius: 20px;
+  pointer-events: none;
 
-  &:hover {
+  ${SkillCardContainer}:hover & {
+    pointer-events: auto; /* 允许指针事件以触发翻转 */
     transform: rotateY(180deg);
   }
 `;
@@ -103,11 +106,11 @@ const CarouselContainer = styled.div`
   }
 
   .slick-prev {
-    left: 10px; /* 根据需要调整箭头的位置 */
+    left: 5px;
   }
 
   .slick-next {
-    right: 10px; /* 根据需要调整箭头的位置 */
+    right: 5px;
   }
 `;
 
