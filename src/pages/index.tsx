@@ -141,6 +141,26 @@ const skills = [
       image: '/path/to/react-logo.png',
       description: 'A JavaScript library for building user interfaces.',
     },
+    {
+    title: 'Django',
+    image: '/path/to/django-logo.png',
+    description: 'A high-level Python Web framework that encourages rapid development.',
+    },
+    {
+    title: 'Django',
+    image: '/path/to/django-logo.png',
+    description: 'A high-level Python Web framework that encourages rapid development.',
+    },
+    {
+    title: 'Django',
+    image: '/path/to/django-logo.png',
+    description: 'A high-level Python Web framework that encourages rapid development.',
+    },
+    {
+    title: 'Django',
+    image: '/path/to/django-logo.png',
+    description: 'A high-level Python Web framework that encourages rapid development.',
+    },
     // TODO: more skills
   ];
 
@@ -402,15 +422,6 @@ export const Home = ({
             <Fade>
                 <Divider />
             </Fade>
-            <Fade top>
-                    <StyledTitle as="h2">Skills</StyledTitle>
-            </Fade>
-            <Fade bottom>
-                <SkillCarousel skills={skills} />
-            </Fade>    
-            <Fade>
-                <Divider />
-            </Fade>
             <WorkExperience>
                 <Fade top>
                     <StyledTitle as="h2">Work Experience</StyledTitle>
@@ -440,6 +451,15 @@ export const Home = ({
                     </WorkDescription>
                 </Fade>
             </WorkSection>
+            <Fade>
+                <Divider />
+            </Fade>
+            <Fade top>
+                    <StyledTitle as="h2">Skills</StyledTitle>
+            </Fade>
+            <Fade bottom>
+                <SkillCarousel skills={skills} />
+            </Fade>    
             <Fade>
                 <Divider />
             </Fade>

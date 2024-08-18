@@ -27,6 +27,7 @@ const SkillCardInner = styled.div`
   transition: transform 0.6s;
   transform-style: preserve-3d;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  border-radius: 20px;
 
   &:hover {
     transform: rotateY(180deg);
@@ -41,10 +42,11 @@ const SkillCardFace = styled.div<{ back?: boolean }>`
   display: flex;
   align-items: center;
   justify-content: center;
-  background-color: ${({ back }) => (back ? '#2980b9' : '#fff')};
+  background-color: ${({ back }) => (back ? '#2980b9' : '#fff000')};
   color: ${({ back }) => (back ? 'white' : 'black')};
   transform: ${({ back }) => (back ? 'rotateY(180deg)' : 'none')};
   padding: 10px;
+  border-radius: 20px;
 `;
 
 const SkillCard: React.FC<SkillCardProps> = ({ title, image, description }) => {
@@ -64,28 +66,79 @@ const SkillCard: React.FC<SkillCardProps> = ({ title, image, description }) => {
 };
 
 const CarouselContainer = styled.div`
-  width: 80%;
+  width: 90%;
   margin: 0 auto;
+  position: relative;
+
+  .slick-slider {
+    overflow: hidden; /* 确保内容不会溢出容器 */
+  }
+
+  .slick-list {
+    overflow: hidden;
+  }
+
+  .slick-track {
+    display: flex;
+    align-items: center; /* 确保卡片垂直居中 */
+  }
+
+  .slick-slide {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: auto; /* 确保卡片高度自动适应内容 */
+  }
+
+  .slick-prev, .slick-next {
+    width: 50px; 
+    height: 50px; 
+    border-radius: 50%;
+    z-index: 2;
+  }
+
+  .slick-prev:before, .slick-next:before {
+    font-size: 50px; /* 调整箭头图标的大小 */
+    color: white; /* 调整箭头图标的颜色 */
+  }
+
+  .slick-prev {
+    left: 10px; /* 根据需要调整箭头的位置 */
+  }
+
+  .slick-next {
+    right: 10px; /* 根据需要调整箭头的位置 */
+  }
 `;
 
 const SkillCarousel: React.FC<{ skills: SkillCardProps[] }> = ({ skills }) => {
   const settings = {
     infinite: true,
     speed: 500,
-    slidesToShow: 3,
+    slidesToShow: 8,
     slidesToScroll: 1,
     centerMode: true,
+    centerPadding: '0px',
     variableWidth: true,
     responsive: [
-      {
-        breakpoint: 768,
-        settings: {
-          slidesToShow: 1,
-          slidesToScroll: 1,
-          centerMode: false,
-          variableWidth: false,
-        },
-      },
+        {
+            breakpoint: 1200,
+            settings: {
+              slidesToShow: 3,
+            },
+          },
+          {
+            breakpoint: 992,
+            settings: {
+              slidesToShow: 2,
+            },
+          },
+          {
+            breakpoint: 576,
+            settings: {
+              slidesToShow: 1,
+            },
+          },
     ],
   };
 
