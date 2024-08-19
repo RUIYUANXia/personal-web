@@ -9,10 +9,6 @@ import activisionLogo from '../../assets/images/activision_logo.png'
 
 import BlogList from '../components/BlogList';
 import { Button, Divider, PageWrapper } from '../components/Common';
-import Github from '../components/icons/Github';
-import Linkedin from '../components/icons/Linkedin';
-import Django from '../components/icons/Django';
-import ReactIcon from '../components/icons/ReactIcon';
 import SkillCarousel from '../components/SkillCarousel';
 import Typewriter from '../components/Typewritter';
 // import Wechat from '../components/icons/Wechat';
@@ -35,6 +31,28 @@ import { Post } from '../types/Post';
 // eslint-disable-next-line no-unused-vars
 import { Project as ProjectType } from '../types/Project';
 import { useTheme } from '../utils/context';
+import {
+    Github,
+    Linkedin,
+    Django,
+    ReactIcon,
+    NodeIcon,
+    PythonIcon,
+    JavaIcon,
+    TypeScriptIcon,
+    CppIcon,
+    PHPIcon,
+    MySQLIcon,
+    PostgreSQLIcon,
+    DatabricksIcon,
+    ElasticIcon,
+    DockerIcon,
+    KubernetesIcon,
+    AirflowIcon,
+    LaTeXIcon,
+    JiraIcon,
+    ConfluenceIcon
+} from '../components/icons';
 
 const Header = styled.div`
     position: relative;
@@ -363,27 +381,103 @@ export const Home = ({
     const isLightTheme = theme.theme === 'light';
     const skills = [
         {
-          title: 'Django',
-          image: <Django iconFill={iconFill}/>,
-          description: 'A high-level Python Web framework that encourages rapid development.',
+            title: 'Django',
+            image: <Django iconFill={iconFill}/>,
+            description: 'A high-level Python Web framework that encourages rapid development.',
         },
         {
-          title: 'React',
-          image: <ReactIcon iconFill={iconFill}/>,
-          description: 'A JavaScript library for building user interfaces.',
+            title: 'React',
+            image: <ReactIcon iconFill={iconFill}/>,
+            description: 'A JavaScript library for building user interfaces.',
         },
         {
-          title: 'Django',
-          image: <Django iconFill={iconFill}/>,
-          description: 'A high-level Python Web framework that encourages rapid development.',
+            title: 'Node.js',
+            image: <NodeIcon iconFill={iconFill}/>,
+            description: 'A JavaScript runtime built on Chrome\'s V8 JavaScript engine.',
         },
         {
-          title: 'React',
-          image: <ReactIcon iconFill={iconFill}/>,
-          description: 'A JavaScript library for building user interfaces.',
+            title: 'Python',
+            image: <PythonIcon iconFill={iconFill}/>,
+            description: 'A versatile programming language that is widely used for web development, data science, etc.',
         },
-        // TODO: more skills
+        {
+            title: 'Java',
+            image: <JavaIcon iconFill={iconFill}/>,
+            description: 'A high-level programming language used for building cross-platform applications.',
+        },
+        {
+            title: 'TypeScript',
+            image: <TypeScriptIcon iconFill={iconFill}/>,
+            description: 'A typed superset of JavaScript that compiles to plain JavaScript.',
+        },
+        {
+            title: 'C++',
+            image: <CppIcon iconFill={iconFill}/>,
+            description: 'A general-purpose programming language created as an extension of the C programming language.',
+        },
+        {
+            title: 'PHP',
+            image: <PHPIcon iconFill={iconFill}/>,
+            description: 'A popular general-purpose scripting language that is especially suited to web development.',
+        },
+        {
+            title: 'MySQL',
+            image: <MySQLIcon iconFill={iconFill}/>,
+            description: 'An open-source relational database management system.',
+        },
+        {
+            title: 'PostgreSQL',
+            image: <PostgreSQLIcon iconFill={iconFill}/>,
+            description: 'An advanced, enterprise-class open-source relational database system.',
+        },
+        {
+            title: 'Databricks',
+            image: <DatabricksIcon iconFill={iconFill}/>,
+            description: 'A cloud-based platform for big data processing and machine learning.',
+        },
+        {
+            title: 'ElasticSearch',
+            image: <ElasticIcon iconFill={iconFill}/>,
+            description: 'A distributed, RESTful search and analytics engine.',
+        },
+        {
+            title: 'GitHub',
+            image: <Github iconFill={iconFill}/>,
+            description: 'A code hosting platform for version control and collaboration.',
+        },
+        {
+            title: 'Docker',
+            image: <DockerIcon iconFill={iconFill}/>,
+            description: 'A platform for developing, shipping, and running applications using containerization.',
+        },
+        {
+            title: 'Kubernetes',
+            image: <KubernetesIcon iconFill={iconFill}/>,
+            description: 'An open-source system for automating the deployment, scaling, and management of containerized applications.',
+        },
+        {
+            title: 'Airflow',
+            image: <AirflowIcon iconFill={iconFill}/>,
+            description: 'A platform to programmatically author, schedule, and monitor workflows.',
+        },
+        {
+            title: 'LaTeX',
+            image: <LaTeXIcon iconFill={iconFill}/>,
+            description: 'A document preparation system for high-quality typesetting.',
+        },
+        {
+            title: 'JIRA',
+            image: <JiraIcon iconFill={iconFill}/>,
+            description: 'A tool developed by Atlassian for bug tracking, issue tracking, and project management.',
+        },
+        {
+            title: 'Confluence',
+            image: <ConfluenceIcon iconFill={iconFill}/>,
+            description: 'A collaboration tool used to help teams collaborate and share knowledge efficiently.',
+        },
+        // more skills here...
     ];
+    
     return (
         <Layout>
             <Header>

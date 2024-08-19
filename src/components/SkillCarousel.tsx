@@ -68,8 +68,15 @@ const SkillCardFace = styled.div<{ back?: boolean; isLightTheme?: boolean }>`
             ? colors.textTitleLight
             : colors.textTitleDark};
     transform: ${({ back }) => (back ? 'rotateY(180deg)' : 'none')};
-    padding: 10px;
+    padding: 5px;
     border-radius: 20px;
+
+    svg {
+        width: 100px;
+        height: 100px;
+        max-width: 100%;
+        max-height: 100%;
+    }
 `;
 
 const SkillCard: React.FC<SkillCardProps> = ({
@@ -84,7 +91,7 @@ const SkillCard: React.FC<SkillCardProps> = ({
                 <SkillCardFace isLightTheme={isLightTheme}>{image}</SkillCardFace>
                 <SkillCardFace back isLightTheme={isLightTheme}>
                     <h2>{title}</h2>
-                    <strong>{description}</strong>
+                    <p>{description}</p>
                 </SkillCardFace>
             </SkillCardInner>
         </SkillCardContainer>
