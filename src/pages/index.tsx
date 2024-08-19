@@ -168,7 +168,7 @@ const WorkSection = styled.div`
     display: flex;
     flex-direction: column;
     align-items: left;
-    padding: 0px 30px;
+    padding: 0px 50px;
 `;
 
 

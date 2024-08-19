@@ -83,8 +83,8 @@ const SkillCard: React.FC<SkillCardProps> = ({
             <SkillCardInner isLightTheme={isLightTheme}>
                 <SkillCardFace isLightTheme={isLightTheme}>{image}</SkillCardFace>
                 <SkillCardFace back isLightTheme={isLightTheme}>
-                    <h3>{title}</h3>
-                    <p>{description}</p>
+                    <h2>{title}</h2>
+                    <strong>{description}</strong>
                 </SkillCardFace>
             </SkillCardInner>
         </SkillCardContainer>
