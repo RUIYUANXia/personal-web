@@ -77,6 +77,10 @@ const SkillCardFace = styled.div<{ back?: boolean; isLightTheme?: boolean }>`
         max-width: 100%;
         max-height: 100%;
     }
+    
+    h2 {
+        margin: 10px 0 5px 0;
+    }
 `;
 
 const SkillCard: React.FC<SkillCardProps> = ({
