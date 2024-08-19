@@ -30,7 +30,7 @@ const SkillCardInner = styled.div<{ isLightTheme?: boolean }>`
     transition: transform 0.6s;
     transform-style: preserve-3d;
     ${({ isLightTheme }) => {
-        const shadowColor = isLightTheme ? colors.borderLight : colors.backgroundDark;
+        const shadowColor = isLightTheme ? colors.borderLight : 'rgba(255, 255, 255, 0.1)';
         return `box-shadow: 0 4px 8px ${shadowColor};`;
     }}
     border-radius: 20px;

@@ -9,6 +9,7 @@ import activisionLogo from '../../assets/images/activision_logo.png'
 
 import BlogList from '../components/BlogList';
 import { Button, Divider, PageWrapper } from '../components/Common';
+import FloatingMenu from '../components/FloatingMenu';
 import SkillCarousel from '../components/SkillCarousel';
 import Typewriter from '../components/Typewritter';
 // import Wechat from '../components/icons/Wechat';
@@ -379,6 +380,13 @@ export const Home = ({
     const theme = useTheme();
     const iconFill = theme.theme === 'light' ? colors.textTitleLight : colors.textTitleDark;
     const isLightTheme = theme.theme === 'light';
+    const FloatingMenuSections = [
+        { id: 'posts', label: 'Recent Posts' },
+        { id: 'projects', label: 'Recent Projects' },
+        { id: 'skills', label: 'Skills' },
+        { id: 'work-experience', label: 'Work Experience' },
+        { id: 'profile', label: 'Back To Top' }
+    ];
     const skills = [
         {
             title: 'Django',
@@ -480,7 +488,8 @@ export const Home = ({
     
     return (
         <Layout>
-            <Header>
+            <FloatingMenu sections={FloatingMenuSections} isLightTheme={isLightTheme} />
+            <Header id='profile'>
                 <HeaderWrapper>
                     <HeadshotWrapper>
                         <Headshot
@@ -510,7 +519,7 @@ export const Home = ({
             <Fade>
                 <Divider />
             </Fade>
-            <WorkExperience>
+            <WorkExperience id='work-experience'>
                 <Fade top>
                     <StyledTitle as="h2">Work Experience</StyledTitle>
                 </Fade>
@@ -543,7 +552,7 @@ export const Home = ({
                 <Divider />
             </Fade>
             <Fade top>
-                    <StyledTitle as="h2">Skills</StyledTitle>
+                    <StyledTitle as="h2" id='skills'>Skills</StyledTitle>
             </Fade>
             <Fade bottom>
                 <SkillCarousel skills={skills} isLightTheme={isLightTheme} />
@@ -554,7 +563,7 @@ export const Home = ({
             <StyledPageWrapper>
                 <Section>
                     <Fade top>
-                        <StyledTitle as="h2">Recent Projects</StyledTitle>
+                        <StyledTitle as="h2" id='projects'>Recent Projects</StyledTitle>
                     </Fade>
                     <Projects>
                         {projects.map(({ node: project }) => (
@@ -594,7 +603,7 @@ export const Home = ({
                 </Fade>
                 <RecentPosts>
                     <Fade top>
-                        <StyledTitle as="h2">Recent Posts</StyledTitle>
+                        <StyledTitle as="h2" id='posts'>Recent Posts</StyledTitle>
                     </Fade>
                     <BlogList posts={posts} />
                     <Fade bottom>
