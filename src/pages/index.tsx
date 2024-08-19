@@ -11,6 +11,8 @@ import BlogList from '../components/BlogList';
 import { Button, Divider, PageWrapper } from '../components/Common';
 import Github from '../components/icons/Github';
 import Linkedin from '../components/icons/Linkedin';
+import Django from '../components/icons/Django';
+import ReactIcon from '../components/icons/ReactIcon';
 import SkillCarousel from '../components/SkillCarousel';
 import Typewriter from '../components/Typewritter';
 // import Wechat from '../components/icons/Wechat';
@@ -129,40 +131,6 @@ const Intro = styled.div`
         max-width: 100%;
     `};
 `;
-
-const skills = [
-    {
-      title: 'Django',
-      image: '/path/to/django-logo.png',
-      description: 'A high-level Python Web framework that encourages rapid development.',
-    },
-    {
-      title: 'React',
-      image: '/path/to/react-logo.png',
-      description: 'A JavaScript library for building user interfaces.',
-    },
-    {
-    title: 'Django',
-    image: '/path/to/django-logo.png',
-    description: 'A high-level Python Web framework that encourages rapid development.',
-    },
-    {
-    title: 'Django',
-    image: '/path/to/django-logo.png',
-    description: 'A high-level Python Web framework that encourages rapid development.',
-    },
-    {
-    title: 'Django',
-    image: '/path/to/django-logo.png',
-    description: 'A high-level Python Web framework that encourages rapid development.',
-    },
-    {
-    title: 'Django',
-    image: '/path/to/django-logo.png',
-    description: 'A high-level Python Web framework that encourages rapid development.',
-    },
-    // TODO: more skills
-  ];
 
 const IntroDescription: React.FC = styled.p`
     ${textSize.largeThin};
@@ -390,6 +358,32 @@ export const Home = ({
         projects: { edges: projects }
     }
 }: HomePageProps) => {
+    const theme = useTheme();
+    const iconFill = theme.theme === 'light' ? colors.textTitleLight : colors.textTitleDark;
+    const isLightTheme = theme.theme === 'light';
+    const skills = [
+        {
+          title: 'Django',
+          image: <Django iconFill={iconFill}/>,
+          description: 'A high-level Python Web framework that encourages rapid development.',
+        },
+        {
+          title: 'React',
+          image: <ReactIcon iconFill={iconFill}/>,
+          description: 'A JavaScript library for building user interfaces.',
+        },
+        {
+          title: 'Django',
+          image: <Django iconFill={iconFill}/>,
+          description: 'A high-level Python Web framework that encourages rapid development.',
+        },
+        {
+          title: 'React',
+          image: <ReactIcon iconFill={iconFill}/>,
+          description: 'A JavaScript library for building user interfaces.',
+        },
+        // TODO: more skills
+    ];
     return (
         <Layout>
             <Header>
@@ -458,7 +452,7 @@ export const Home = ({
                     <StyledTitle as="h2">Skills</StyledTitle>
             </Fade>
             <Fade bottom>
-                <SkillCarousel skills={skills} />
+                <SkillCarousel skills={skills} isLightTheme={isLightTheme} />
             </Fade>    
             <Fade>
                 <Divider />
