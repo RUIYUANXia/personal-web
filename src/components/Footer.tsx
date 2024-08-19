@@ -73,7 +73,17 @@ const FooterComponent = ({}: FooterProps) => {
                         </SocialMediaLink>
                     </SocialMediaListItem>
                 </SocialMediaList>
-                <strong> 😉 <Typewriter words={["Please don't hesitate to get in touch with me!",'Sincere gratitude to the open source on GitHub!']} delay={100}/></strong>
+                <strong>
+                    {' '}
+                    😉{' '}
+                    <Typewriter
+                        words={[
+                            "Please don't hesitate to get in touch with me!",
+                            'Sincere gratitude to the open source on GitHub!'
+                        ]}
+                        delay={100}
+                    />
+                </strong>
             </ModifiedPageWrapper>
         </Footer>
     );

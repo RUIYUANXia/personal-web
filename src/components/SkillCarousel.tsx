@@ -1,6 +1,7 @@
 import React from 'react';
-import styled from 'styled-components';
 import Slider from 'react-slick';
+import styled from 'styled-components';
+
 import { colors } from '../styles/common';
 
 interface SkillCardProps {
@@ -30,12 +31,13 @@ const SkillCardInner = styled.div<{ isLightTheme?: boolean }>`
     transition: transform 0.6s;
     transform-style: preserve-3d;
     ${({ isLightTheme }) => {
-        const shadowColor = isLightTheme ? colors.borderLight : 'rgba(255, 255, 255, 0.1)';
+        const shadowColor = isLightTheme
+            ? colors.borderLight
+            : 'rgba(255, 255, 255, 0.1)';
         return `box-shadow: 0 4px 8px ${shadowColor};`;
     }}
     border-radius: 20px;
     pointer-events: none;
-
     ${SkillCardContainer}:hover & {
         pointer-events: auto;
         transform: rotateY(180deg);
@@ -70,14 +72,12 @@ const SkillCardFace = styled.div<{ back?: boolean; isLightTheme?: boolean }>`
     transform: ${({ back }) => (back ? 'rotateY(180deg)' : 'none')};
     padding: 5px;
     border-radius: 20px;
-
     svg {
         width: 100px;
         height: 100px;
         max-width: 100%;
         max-height: 100%;
     }
-    
     h2 {
         margin: 10px 0 5px 0;
     }
@@ -183,7 +183,6 @@ const SkillCarousel: React.FC<{
             }
         ]
     };
-
     return (
         <CarouselContainer>
             <Slider {...settings}>

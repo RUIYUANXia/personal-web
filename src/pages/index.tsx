@@ -3,21 +3,43 @@ import { graphql } from 'gatsby';
 import Img from 'gatsby-image';
 import React from 'react';
 import Fade from 'react-reveal/Fade';
-import 'slick-carousel/slick/slick.css';
 import 'slick-carousel/slick/slick-theme.css';
-import activisionLogo from '../../assets/images/activision_logo.png'
+import 'slick-carousel/slick/slick.css';
+import { keyframes } from 'styled-components';
 
+import activisionLogo from '../../assets/images/activision_logo.png';
 import BlogList from '../components/BlogList';
 import { Button, Divider, PageWrapper } from '../components/Common';
 import FloatingMenu from '../components/FloatingMenu';
-import SkillCarousel from '../components/SkillCarousel';
-import Typewriter from '../components/Typewritter';
+import {
+    AirflowIcon,
+    ConfluenceIcon,
+    CppIcon,
+    DatabricksIcon,
+    Django,
+    DockerIcon,
+    ElasticIcon,
+    Github,
+    JavaIcon,
+    JiraIcon,
+    KubernetesIcon,
+    LaTeXIcon,
+    Linkedin,
+    MySQLIcon,
+    NodeIcon,
+    PHPIcon,
+    PostgreSQLIcon,
+    PythonIcon,
+    ReactIcon,
+    TypeScriptIcon
+} from '../components/icons';
 // import Wechat from '../components/icons/Wechat';
 import Layout from '../components/Layout';
 import Link from '../components/Link';
+import SkillCarousel from '../components/SkillCarousel';
+import Typewriter from '../components/Typewritter';
 import { Title } from '../components/Typography';
 import styled from '../lib/styled-components';
-import { keyframes } from 'styled-components';
 import {
     colors,
     media,
@@ -32,28 +54,6 @@ import { Post } from '../types/Post';
 // eslint-disable-next-line no-unused-vars
 import { Project as ProjectType } from '../types/Project';
 import { useTheme } from '../utils/context';
-import {
-    Github,
-    Linkedin,
-    Django,
-    ReactIcon,
-    NodeIcon,
-    PythonIcon,
-    JavaIcon,
-    TypeScriptIcon,
-    CppIcon,
-    PHPIcon,
-    MySQLIcon,
-    PostgreSQLIcon,
-    DatabricksIcon,
-    ElasticIcon,
-    DockerIcon,
-    KubernetesIcon,
-    AirflowIcon,
-    LaTeXIcon,
-    JiraIcon,
-    ConfluenceIcon
-} from '../components/icons';
 
 const Header = styled.div`
     position: relative;
@@ -171,16 +171,15 @@ const WorkExperience = styled.div`
 `;
 
 const WorkHeader = styled.div`
-  display: flex;
-  align-items: center;
-  margin-bottom: 10px;
-  
+    display: flex;
+    align-items: center;
+    margin-bottom: 10px;
 `;
 
 const WorkLogo = styled.img`
-  width: 50px;
-  height: 50px;
-  margin-right: 20px;
+    width: 50px;
+    height: 50px;
+    margin-right: 20px;
 `;
 
 const WorkSection = styled.div`
@@ -189,7 +188,6 @@ const WorkSection = styled.div`
     align-items: left;
     padding: 0px 50px;
 `;
-
 
 const WorkTitle = styled.p`
     ${textSize.largeThin};
@@ -378,7 +376,8 @@ export const Home = ({
     }
 }: HomePageProps) => {
     const theme = useTheme();
-    const iconFill = theme.theme === 'light' ? colors.textTitleLight : colors.textTitleDark;
+    const iconFill =
+        theme.theme === 'light' ? colors.textTitleLight : colors.textTitleDark;
     const isLightTheme = theme.theme === 'light';
     const FloatingMenuSections = [
         { id: 'posts', label: 'Recent Posts' },
@@ -390,106 +389,125 @@ export const Home = ({
     const skills = [
         {
             title: 'Django',
-            image: <Django iconFill={iconFill}/>,
-            description: 'A high-level Python Web framework that encourages rapid development.',
+            image: <Django iconFill={iconFill} />,
+            description:
+                'A high-level Python Web framework that encourages rapid development.'
         },
         {
             title: 'React',
-            image: <ReactIcon iconFill={iconFill}/>,
-            description: 'A JavaScript library for building user interfaces.',
+            image: <ReactIcon iconFill={iconFill} />,
+            description: 'A JavaScript library for building user interfaces.'
         },
         {
             title: 'Node.js',
-            image: <NodeIcon iconFill={iconFill}/>,
-            description: 'A JavaScript runtime built on Chrome\'s V8 JavaScript engine.',
+            image: <NodeIcon iconFill={iconFill} />,
+            description:
+                "A JavaScript runtime built on Chrome's V8 JavaScript engine."
         },
         {
             title: 'Python',
-            image: <PythonIcon iconFill={iconFill}/>,
-            description: 'A versatile programming language that is widely used for web development, data science, etc.',
+            image: <PythonIcon iconFill={iconFill} />,
+            description:
+                'A versatile programming language that is widely used for web development, data science, etc.'
         },
         {
             title: 'Java',
-            image: <JavaIcon iconFill={iconFill}/>,
-            description: 'A high-level programming language used for building cross-platform applications.',
+            image: <JavaIcon iconFill={iconFill} />,
+            description:
+                'A high-level programming language used for building cross-platform applications.'
         },
         {
             title: 'TypeScript',
-            image: <TypeScriptIcon iconFill={iconFill}/>,
-            description: 'A typed superset of JavaScript that compiles to plain JavaScript.',
+            image: <TypeScriptIcon iconFill={iconFill} />,
+            description:
+                'A typed superset of JavaScript that compiles to plain JavaScript.'
         },
         {
             title: 'C++',
-            image: <CppIcon iconFill={iconFill}/>,
-            description: 'A general-purpose programming language created as an extension of the C programming language.',
+            image: <CppIcon iconFill={iconFill} />,
+            description:
+                'A general-purpose programming language created as an extension of the C programming language.'
         },
         {
             title: 'PHP',
-            image: <PHPIcon iconFill={iconFill}/>,
-            description: 'A popular general-purpose scripting language that is especially suited to web development.',
+            image: <PHPIcon iconFill={iconFill} />,
+            description:
+                'A popular general-purpose scripting language that is especially suited to web development.'
         },
         {
             title: 'MySQL',
-            image: <MySQLIcon iconFill={iconFill}/>,
-            description: 'An open-source relational database management system.',
+            image: <MySQLIcon iconFill={iconFill} />,
+            description: 'An open-source relational database management system.'
         },
         {
             title: 'PostgreSQL',
-            image: <PostgreSQLIcon iconFill={iconFill}/>,
-            description: 'An advanced, enterprise-class open-source relational database system.',
+            image: <PostgreSQLIcon iconFill={iconFill} />,
+            description:
+                'An advanced, enterprise-class open-source relational database system.'
         },
         {
             title: 'Databricks',
-            image: <DatabricksIcon iconFill={iconFill}/>,
-            description: 'A cloud-based platform for big data processing and machine learning.',
+            image: <DatabricksIcon iconFill={iconFill} />,
+            description:
+                'A cloud-based platform for big data processing and machine learning.'
         },
         {
             title: 'ElasticSearch',
-            image: <ElasticIcon iconFill={iconFill}/>,
-            description: 'A distributed, RESTful search and analytics engine.',
+            image: <ElasticIcon iconFill={iconFill} />,
+            description: 'A distributed, RESTful search and analytics engine.'
         },
         {
             title: 'GitHub',
-            image: <Github iconFill={iconFill}/>,
-            description: 'A code hosting platform for version control and collaboration.',
+            image: <Github iconFill={iconFill} />,
+            description:
+                'A code hosting platform for version control and collaboration.'
         },
         {
             title: 'Docker',
-            image: <DockerIcon iconFill={iconFill}/>,
-            description: 'A platform for developing, shipping, and running applications using containerization.',
+            image: <DockerIcon iconFill={iconFill} />,
+            description:
+                'A platform for developing, shipping, and running applications using containerization.'
         },
         {
             title: 'Kubernetes',
-            image: <KubernetesIcon iconFill={iconFill}/>,
-            description: 'An open-source system for automating the deployment, scaling, and management of containerized applications.',
+            image: <KubernetesIcon iconFill={iconFill} />,
+            description:
+                'An open-source system for automating the deployment, scaling, and management of containerized applications.'
         },
         {
             title: 'Airflow',
-            image: <AirflowIcon iconFill={iconFill}/>,
-            description: 'A platform to programmatically author, schedule, and monitor workflows.',
+            image: <AirflowIcon iconFill={iconFill} />,
+            description:
+                'A platform to programmatically author, schedule, and monitor workflows.'
         },
         {
             title: 'LaTeX',
-            image: <LaTeXIcon iconFill={iconFill}/>,
-            description: 'A document preparation system for high-quality typesetting.',
+            image: <LaTeXIcon iconFill={iconFill} />,
+            description:
+                'A document preparation system for high-quality typesetting.'
         },
         {
             title: 'JIRA',
-            image: <JiraIcon iconFill={iconFill}/>,
-            description: 'A tool developed by Atlassian for bug tracking, issue tracking, and project management.',
+            image: <JiraIcon iconFill={iconFill} />,
+            description:
+                'A tool developed by Atlassian for bug tracking, issue tracking, and project management.'
         },
         {
             title: 'Confluence',
-            image: <ConfluenceIcon iconFill={iconFill}/>,
-            description: 'A collaboration tool used to help teams collaborate and share knowledge efficiently.',
-        },
+            image: <ConfluenceIcon iconFill={iconFill} />,
+            description:
+                'A collaboration tool used to help teams collaborate and share knowledge efficiently.'
+        }
         // more skills here...
     ];
-    
+
     return (
         <Layout>
-            <FloatingMenu sections={FloatingMenuSections} isLightTheme={isLightTheme} />
-            <Header id='profile'>
+            <FloatingMenu
+                sections={FloatingMenuSections}
+                isLightTheme={isLightTheme}
+            />
+            <Header id="profile">
                 <HeaderWrapper>
                     <HeadshotWrapper>
                         <Headshot
@@ -499,13 +517,20 @@ export const Home = ({
                     </HeadshotWrapper>
                     <Intro>
                         <IntroDescription>
-                           <strong>Hi there!</strong> 
-                           <br />
-                            I am <strong>Ruiyuan Xia</strong>
-                            <br />
-                            a <strong>UBC</strong> student major in <strong>CS</strong>
-                            <br />
-                            a <strong>full stack </strong> <strong><Typewriter words={['software developer...', 'data engineer...']} delay={170} /></strong>
+                            <strong>Hi there!</strong>
+                            <br />I am <strong>Ruiyuan Xia</strong>
+                            <br />a <strong>UBC</strong> student major in{' '}
+                            <strong>CS</strong>
+                            <br />a <strong>full stack </strong>{' '}
+                            <strong>
+                                <Typewriter
+                                    words={[
+                                        'software developer...',
+                                        'data engineer...'
+                                    ]}
+                                    delay={170}
+                                />
+                            </strong>
                         </IntroDescription>
                         <SocialMediaGroup />
                     </Intro>
@@ -519,7 +544,7 @@ export const Home = ({
             <Fade>
                 <Divider />
             </Fade>
-            <WorkExperience id='work-experience'>
+            <WorkExperience id="work-experience">
                 <Fade top>
                     <StyledTitle as="h2">Work Experience</StyledTitle>
                 </Fade>
@@ -538,13 +563,22 @@ export const Home = ({
                         </WorkSubTitle>
                     </WorkHeader>
                     <WorkDescription>
-                        • Responsible for the development of data engineering and self service applications with diverse datastore integrations, primarily leveraging Django. <br />
-                        • Involved in the design and implementation of templated SQL systems for metadata tracking and data quality assurance. <br />
-                        • Participated in full-stack development activities, including backend services, APIs, and frontends for data analytics tool delivery. <br />
-                        • Enhanced the anti-cheat application by integrating a permanent ban feature for player mitigation. <br />
-                        • Authored complex SQL queries for diverse reporting, dashboarding and visualization. <br />
-                        • Supported KPI data ingress and reporting, including game client failures and backend system health. <br />
-                        • Enhanced ElasticSearch functionality for the Data QA automation tool, improving the search results.
+                        • Responsible for the development of data engineering and
+                        self service applications with diverse datastore
+                        integrations, primarily leveraging Django. <br />• Involved
+                        in the design and implementation of templated SQL systems for
+                        metadata tracking and data quality assurance. <br />
+                        • Participated in full-stack development activities,
+                        including backend services, APIs, and frontends for data
+                        analytics tool delivery. <br />
+                        • Enhanced the anti-cheat application by integrating a
+                        permanent ban feature for player mitigation. <br />
+                        • Authored complex SQL queries for diverse reporting,
+                        dashboarding and visualization. <br />
+                        • Supported KPI data ingress and reporting, including game
+                        client failures and backend system health. <br />• Enhanced
+                        ElasticSearch functionality for the Data QA automation tool,
+                        improving the search results.
                     </WorkDescription>
                 </Fade>
             </WorkSection>
@@ -552,18 +586,22 @@ export const Home = ({
                 <Divider />
             </Fade>
             <Fade top>
-                    <StyledTitle as="h2" id='skills'>Skills</StyledTitle>
+                <StyledTitle as="h2" id="skills">
+                    Skills
+                </StyledTitle>
             </Fade>
             <Fade bottom>
                 <SkillCarousel skills={skills} isLightTheme={isLightTheme} />
-            </Fade>    
+            </Fade>
             <Fade>
                 <Divider />
             </Fade>
             <StyledPageWrapper>
                 <Section>
                     <Fade top>
-                        <StyledTitle as="h2" id='projects'>Recent Projects</StyledTitle>
+                        <StyledTitle as="h2" id="projects">
+                            Recent Projects
+                        </StyledTitle>
                     </Fade>
                     <Projects>
                         {projects.map(({ node: project }) => (
@@ -597,19 +635,21 @@ export const Home = ({
                         <Button to="/projects">See all projects</Button>
                     </Fade>
                 </Section>
-                </StyledPageWrapper>
-                <Fade>
-                    <Divider />
+            </StyledPageWrapper>
+            <Fade>
+                <Divider />
+            </Fade>
+            <RecentPosts>
+                <Fade top>
+                    <StyledTitle as="h2" id="posts">
+                        Recent Posts
+                    </StyledTitle>
                 </Fade>
-                <RecentPosts>
-                    <Fade top>
-                        <StyledTitle as="h2" id='posts'>Recent Posts</StyledTitle>
-                    </Fade>
-                    <BlogList posts={posts} />
-                    <Fade bottom>
-                        <Button to="/blog">See all posts</Button>
-                    </Fade>
-                </RecentPosts>
+                <BlogList posts={posts} />
+                <Fade bottom>
+                    <Button to="/blog">See all posts</Button>
+                </Fade>
+            </RecentPosts>
         </Layout>
     );
 };

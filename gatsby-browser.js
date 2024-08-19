@@ -7,7 +7,6 @@
  * https://davidwalsh.name/css-focus
  */
 import 'focus-visible';
-
 import React, { useEffect, useState } from 'react';
 
 import { ThemeProvider } from './src/lib/styled-components';

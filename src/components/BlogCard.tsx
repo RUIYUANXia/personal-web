@@ -14,7 +14,6 @@ import {
 import { Post as PostType } from '../types/Post';
 import Link from './Link';
 
-
 const Post = styled.section`
     width: 1200px;
     height: auto;
