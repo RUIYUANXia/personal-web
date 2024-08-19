@@ -29,7 +29,7 @@ module.exports = {
         '@typescript-eslint/no-use-before-define': 'warn',
         'camelcase': 'error',
         'eqeqeq': 'error',
-        'max-lines': ['warn', 200],
+        'max-lines': ['warn', 800],
         'no-console': 'warn',
         'no-trailing-spaces': 'error',
         'no-unexpected-multiline': 'off',
