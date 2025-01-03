@@ -8,6 +8,7 @@ import 'slick-carousel/slick/slick.css';
 import { keyframes } from 'styled-components';
 
 import activisionLogo from '../../assets/images/activision_logo.png';
+import look4Logo from '../../assets/images/look4_logo.png';
 import BlogList from '../components/BlogList';
 import { Button, Divider, PageWrapper } from '../components/Common';
 import FloatingMenu from '../components/FloatingMenu';
@@ -582,7 +583,7 @@ export const Home = ({
                     precision</b> and <b>efficiency</b>.<br />
                     </WorkDescription>
                     <WorkHeader>
-                        <WorkLogo src={activisionLogo} alt="Activision Logo" />
+                        <WorkLogo src={look4Logo} alt="Look4 Logo" />
                         <WorkTitle>
                             <strong>Computer Animation Tutor</strong>
                             <br /> @ Look4 Education Group • Part-time
