@@ -559,26 +559,51 @@ export const Home = ({
                         </WorkTitle>
                         <WorkSubTitle>
                             <strong>Sep 2023 - Aug 2024 • 1 yr</strong>
-                            <br /> Vancouver, BC, Canada • Hybrid
+                            <br /> Vancouver, BC, Canada
                         </WorkSubTitle>
                     </WorkHeader>
                     <WorkDescription>
-                        • Responsible for the development of data engineering and
-                        self service applications with diverse datastore
-                        integrations, primarily leveraging Django. <br />• Involved
-                        in the design and implementation of templated SQL systems for
-                        metadata tracking and data quality assurance. <br />
-                        • Participated in full-stack development activities,
-                        including backend services, APIs, and frontends for data
-                        analytics tool delivery. <br />
-                        • Enhanced the anti-cheat application by integrating a
-                        permanent ban feature for player mitigation. <br />
-                        • Authored complex SQL queries for diverse reporting,
-                        dashboarding and visualization. <br />
-                        • Supported KPI data ingress and reporting, including game
-                        client failures and backend system health. <br />• Enhanced
-                        ElasticSearch functionality for the Data QA automation tool,
-                        improving the search results.
+                    • Designed and implemented a <b>permanent ban feature</b> for an <b>anti-cheat 
+                    application</b> used by teams to identify cheaters in <b>Call of Duty</b>, overcoming 
+                    <b> API documentation gaps</b> and introducing a <b>retry mechanism</b> to ensure reliability,
+                    significantly bolstering platform security. <br />
+                    • Led the development of a <b>client crash reporting analytics system</b> during a PM’s
+                    absence, collaborating with stakeholders to define <b>critical metrics and visualizations</b>. 
+                    Utilized <b>SQL</b> to deliver actionable insights that enhanced game stability. <br />
+                    • Maintained and enhanced a <b>company-wide data visualization tool</b> with <b>4.2K+ 
+                    internal users</b>, assisting customers in building dashboards for diverse analytical needs.
+                    Collaborated with a business manager to <b>deliver a tailored dashboard in just two days</b>,
+                    earning <b>recognition</b> in the <b>studio's year-end review</b>. <br />
+                    • Collaborated with the team to <b>optimize query performance</b> by creating a <b>SQL-driven analysis 
+                    system</b>. <b>Identified poorly performing queries</b> and <b>implemented GCP Cloud Scheduler jobs</b> with 
+                    daily and weekly schedules using <b>Python scripts</b> to prevent their repeated execution, contributing 
+                    to a <b>50% reduction</b> in query runner <b>costs</b>. <br />
+                    • Enhanced <b>ElasticSearch functionality</b> for the Data QA automation tool, improving <b>search 
+                    precision</b> and <b>efficiency</b>.<br />
+                    </WorkDescription>
+                    <WorkHeader>
+                        <WorkLogo src={activisionLogo} alt="Activision Logo" />
+                        <WorkTitle>
+                            <strong>Computer Animation Tutor</strong>
+                            <br /> @ Look4 Education Group • Part-time
+                        </WorkTitle>
+                        <WorkSubTitle>
+                            <strong>Sep 2022 - Aug 2024 • 2 yr</strong>
+                            <br /> Vancouver, BC, Canada
+                        </WorkSubTitle>
+                    </WorkHeader>
+                    <WorkDescription>
+                    • Led <b>group tutoring sessions</b> on <b>computer animation</b> and <b>OpenGL pipeline</b>, modeled 
+                    after <b>CPSC 314</b>, a <b>university level (300-level)</b> computer graphics course. Topics 
+                    included <b>real-time rendering</b>, <b>transformation matrices</b>, <b>shader programming</b>, and  
+                    <b> 3D graphics</b>. <br />
+                    • Developed and implemented a <b>customized curriculum</b> that balanced <b>theory</b> with 
+                    <b> hands-on projects</b>, enabling students to design and build functional <b>3D animation 
+                    systems</b>. <br />
+                    • Mentored <b>more than 50 students</b>, with <b>over 90% achieving grades of A or higher</b>, 
+                    reflecting the program’s academic rigor and effective teaching methods. <br />
+                    • Received consistent <b>high ratings</b> for teaching effectiveness, curriculum clarity, 
+                    and fostering student engagement. <br />
                     </WorkDescription>
                 </Fade>
             </WorkSection>
