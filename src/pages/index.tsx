@@ -9,6 +9,7 @@ import { keyframes } from 'styled-components';
 
 import activisionLogo from '../../assets/images/activision_logo.png';
 import look4Logo from '../../assets/images/look4_logo.png';
+import whalecloudLogo from '../../assets/images/whalecloud_logo.png';
 import BlogList from '../components/BlogList';
 import { Button, Divider, PageWrapper } from '../components/Common';
 import FloatingMenu from '../components/FloatingMenu';
@@ -520,16 +521,16 @@ export const Home = ({
                         <IntroDescription>
                             <strong>Hi there!</strong>
                             <br />I am <strong>Ruiyuan Xia</strong>
-                            <br />a <strong>UBC</strong> student major in{' '}
-                            <strong>CS</strong>
-                            <br />a <strong>full stack </strong>{' '}
+                            <br />a <strong>UBC Computer Science</strong> graduate
+                            <br />
                             <strong>
                                 <Typewriter
                                     words={[
-                                        'software developer...',
-                                        'data engineer...'
+                                        'Full Stack Software Developer...',
+                                        'Full Stack Data Engineer...',
+                                        'International Delivery Engineer...'
                                     ]}
-                                    delay={170}
+                                    delay={100}
                                 />
                             </strong>
                         </IntroDescription>
@@ -553,6 +554,23 @@ export const Home = ({
             <WorkSection>
                 <Fade bottom>
                     <WorkHeader>
+                        <WorkLogo src={whalecloudLogo} alt="WhaleCloud Logo" />
+                        <WorkTitle>
+                            <strong>International Delivery Engineer</strong>
+                            <br /> @ Whale Cloud • Full-time
+                        </WorkTitle>
+                        <WorkSubTitle>
+                            <strong>Nov 2025 - Present</strong>
+                            <br /> Nanjing, Jiangsu, China
+                        </WorkSubTitle>
+                    </WorkHeader>
+                    <WorkDescription>
+                    • <b>Validation & Testing Support</b>: Proactively supported team validation efforts across multiple areas, including hotfix verification, dry-run execution, and on-site issue regression, ensuring software stability before customer acceptance.<br />
+                    • <b>CI/CD & Test Automation</b>: Contributed to CI/CD test case development and built custom plugins to stabilize AI-driven test execution, improving automation reliability.<br />
+                    • <b>Process Improvement via App Development</b>: Identified that manual SIM file generation was time-consuming and error-prone; initially developed Python scripts to automate the process, then evolved it into a cross-platform desktop application with a graphical user interface (GUI), compatible with both macOS and Windows. The app significantly reduced turnaround time and eliminated human errors.<br />
+                    • <b>Containerized Test Environment Support</b>: Supported debugging and deployment of production environment automation tests inside containers, ensuring reliable test execution and seamless integration into the delivery pipeline.<br />
+                    </WorkDescription>
+                    <WorkHeader>
                         <WorkLogo src={activisionLogo} alt="Activision Logo" />
                         <WorkTitle>
                             <strong>Full Stack Engineer - Data</strong>
@@ -564,23 +582,11 @@ export const Home = ({
                         </WorkSubTitle>
                     </WorkHeader>
                     <WorkDescription>
-                    • Designed and implemented a <b>permanent ban feature</b> for an <b>anti-cheat 
-                    application</b> used by teams to identify cheaters in <b>Call of Duty</b>, overcoming 
-                    <b> API documentation gaps</b> and introducing a <b>retry mechanism</b> to ensure reliability,
-                    significantly bolstering platform security. <br />
-                    • Led the development of a <b>client crash reporting analytics system</b> during a PM’s
-                    absence, collaborating with stakeholders to define <b>critical metrics and visualizations</b>. 
-                    Utilized <b>SQL</b> to deliver actionable insights that enhanced game stability. <br />
-                    • Maintained and enhanced a <b>company-wide data visualization tool</b> with <b>4.2K+ 
-                    internal users</b>, assisting customers in building dashboards for diverse analytical needs.
-                    Collaborated with a business manager to <b>deliver a tailored dashboard in just two days</b>,
-                    earning <b>recognition</b> in the <b>studio's year-end review</b>. <br />
-                    • Collaborated with the team to <b>optimize query performance</b> by creating a <b>SQL-driven analysis 
-                    system</b>. <b>Identified poorly performing queries</b> and <b>implemented GCP Cloud Scheduler jobs</b> with 
-                    daily and weekly schedules using <b>Python scripts</b> to prevent their repeated execution, contributing 
-                    to a <b>50% reduction</b> in query runner <b>costs</b>. <br />
-                    • Enhanced <b>ElasticSearch functionality</b> for the Data QA automation tool, improving <b>search 
-                    precision</b> and <b>efficiency</b>.<br />
+                    • <b>Anti-Cheat Feature Development</b>: Designed and implemented a permanent ban feature for an anti-cheat application used by teams to identify cheaters in Call of Duty. Overcame incomplete API documentation and introduced a retry mechanism to ensure reliability, significantly bolstering platform security.<br />
+                    • <b>Crash Reporting Analytics System</b>: Led the development of a client crash reporting analytics dashboard during a PM's absence, collaborating with stakeholders to define critical metrics and visualizations. Used SQL to deliver actionable insights that directly improved game stability.<br />
+                    • <b>Data Visualization Tool (4.2K+ internal users)</b>: Maintained and enhanced a company-wide data visualization tool serving 4.2K+ internal users, assisting customers in building dashboards for diverse analytical needs. Partnered with a business manager to deliver a tailored dashboard in just two days — an effort that earned recognition in the studio's year-end review.<br />
+                    • <b>Query Performance Optimization</b>: Collaborated with the team to optimize query performance by building a SQL-driven analysis system. Identified poorly performing queries and implemented GCP Cloud Scheduler jobs (daily/weekly) using Python scripts to prevent repetitive execution, contributing to a 50% reduction in query runner costs.<br />
+                    • <b>ElasticSearch Enhancement</b>: Enhanced ElasticSearch functionality for the Data QA automation tool, improving search precision and efficiency.<br />
                     </WorkDescription>
                     <WorkHeader>
                         <WorkLogo src={look4Logo} alt="Look4 Logo" />
@@ -594,17 +600,10 @@ export const Home = ({
                         </WorkSubTitle>
                     </WorkHeader>
                     <WorkDescription>
-                    • Led <b>group tutoring sessions</b> on <b>computer animation</b> and <b>OpenGL pipeline</b>, modeled 
-                    after <b>CPSC 314</b>, a <b>university level (300-level)</b> computer graphics course. Topics 
-                    included <b>real-time rendering</b>, <b>transformation matrices</b>, <b>shader programming</b>, and  
-                    <b> 3D graphics</b>. <br />
-                    • Developed and implemented a <b>customized curriculum</b> that balanced <b>theory</b> with 
-                    <b> hands-on projects</b>, enabling students to design and build functional <b>3D animation 
-                    systems</b>. <br />
-                    • Mentored <b>more than 50 students</b>, with <b>over 90% achieving grades of A or higher</b>, 
-                    reflecting the program’s academic rigor and effective teaching methods. <br />
-                    • Received consistent <b>high ratings</b> for teaching effectiveness, curriculum clarity, 
-                    and fostering student engagement. <br />
+                    • <b>Group Tutoring (Computer Graphics):</b> Led group tutoring sessions on computer animation and OpenGL pipeline, modeled after CPSC 314 — a university-level (300-level) computer graphics course. Covered real-time rendering, transformation matrices, shader programming, and 3D graphics.<br />
+                    • <b>Curriculum Development:</b> Developed and implemented a customized curriculum balancing theoretical foundations with hands-on projects, enabling students to design and build functional 3D animation systems.<br />
+                    • <b>Student Outcomes:</b> Mentored over 50 students, with 90%+ achieving grades of A or higher, demonstrating both the program's academic rigor and the effectiveness of the instructional approach.<br />
+                    • <b>Teaching Recognition:</b> Consistently received high ratings for teaching effectiveness, curriculum clarity, and student engagement.<br />
                     </WorkDescription>
                 </Fade>
             </WorkSection>

@@ -37,7 +37,11 @@ const Typewriter = ({ words, delay }: { words: string[]; delay: number }) => {
         }
     }, [currentIndex, delay, words, currentWordIndex, isDeleting]);
 
-    return <span>{currentText}</span>;
+    return (
+        <span style={{ display: 'inline-block', minHeight: '1em' }}>
+            {currentText}
+        </span>
+    );
 };
 
 export default Typewriter;
